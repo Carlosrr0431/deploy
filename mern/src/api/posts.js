@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const getPostsRequests = async() => await axios.get('http://localhost:3000/posts');
+export const getPostsRequests = async() => await axios.get('/posts');
 
 export const createPostsRequests = async(post) => {
 
@@ -10,15 +10,15 @@ export const createPostsRequests = async(post) => {
     form.append(key, post[key]);
   }
 
-  return await axios.post('http://localhost:3000/posts', form, {
+  return await axios.post('/posts', form, {
     headers: {
       "Content-Type": "multipart/form-data"
     }
   });
 }
 
-export const deletePostRequest = async (id) => await axios.delete(`http://localhost:3000/posts/${id}`)
+export const deletePostRequest = async (id) => await axios.delete(`/posts/${id}`)
 
-export const gestPostRequest = async (id) => await axios.get(`http://localhost:3000/posts/${id}`);
+export const gestPostRequest = async (id) => await axios.get(`/posts/${id}`);
 
-export const updatePostRequest = async (id, newFields ) => await axios.put(`http://localhost:3000/posts/${id}`, newFields);
+export const updatePostRequest = async (id, newFields ) => await axios.put(`/posts/${id}`, newFields);

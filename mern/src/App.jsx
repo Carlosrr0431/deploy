@@ -2,6 +2,9 @@ import { PostProvider} from './context/PostContext';
 import { HomePage, PostForm, NotFound } from './pages/index'
 import { Routes, Route } from 'react-router-dom';
 import {Toaster} from 'react-hot-toast';
+import axios from 'axios';
+
+axios.defaults.baseURL = "http://localhost:3000/";
 
 export const App = () => {
   return (
