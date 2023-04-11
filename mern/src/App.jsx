@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import {Toaster} from 'react-hot-toast';
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://localhost:3000/";
+axios.defaults.baseURL = "https://deploy-production-5e67.up.railway.app/";
 
 export const App = () => {
   return (
